@@ -1,23 +1,59 @@
-import React from 'react';
-import { Card, CardContent, Typography, Grid } from '@material-ui/core';
-import CountUp from 'react-countup';
-import cx from 'classnames';
+import React from "react";
+import { Card, CardContent, Typography, Grid } from "@material-ui/core";
+import CountUp from "react-countup";
+import cx from "classnames";
 
-import styles from './Card.module.css';
+import styles from "./Card.module.css";
 
-const CardComponent = ({ className, cardTitle, value, lastUpdate, cardSubtitle }) => (
-  <Grid item xs={12} md={3} component={Card} className={cx(styles.card, className)}>
+const CardComponent = ({
+  className,
+  cardTitle,
+  value,
+  lastUpdate,
+  cardSubtitle,
+}) => (
+  <Grid
+    item
+    xs={12}
+    md={3}
+    component={Card}
+    className={cx(styles.card, className)}
+  >
     <CardContent>
-      <Typography color="textSecondary" gutterBottom>
+      <Typography
+        color="textSecondary"
+        gutterBottom
+        style={{
+          fontFamily: "'Akaya Telivigala', cursive",
+          fontSize: "1.5rem",
+        }}
+      >
         {cardTitle}
       </Typography>
-      <Typography variant="h5" component="h2">
+      <Typography
+        variant="h5"
+        component="h2"
+        style={{ fontFamily: "'Akaya Telivigala', cursive" }}
+      >
         <CountUp start={0} end={value} duration={2.75} separator="," />
       </Typography>
-      <Typography color="textSecondary">
+      <Typography
+        color="textSecondary"
+        style={{
+          fontFamily: "'Akaya Telivigala', cursive",
+          fontSize: "1.2rem",
+        }}
+      >
         {new Date(lastUpdate).toDateString()}
       </Typography>
-      <Typography variant="body2" component="p">
+      <Typography
+        variant="body2"
+        component="p"
+        style={{
+          fontFamily: "'Akaya Telivigala', cursive",
+          fontSize: "1rem",
+        }}
+      >
         {cardSubtitle}
       </Typography>
     </CardContent>

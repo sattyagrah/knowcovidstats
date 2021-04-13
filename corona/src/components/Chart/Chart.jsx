@@ -30,6 +30,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
               "rgba(0, 255, 0, 0.5)",
               "rgba(255, 0, 0, 0.5)",
             ],
+            fontFamily: "'Akaya Telivigala', cursive",
             data: [confirmed.value, recovered.value, deaths.value],
           },
         ],
@@ -50,12 +51,14 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
         datasets: [
           {
             data: dailyData.map((data) => data.confirmed),
+            fontFamily: "'Akaya Telivigala', cursive",
             label: "Infected",
             borderColor: "#3333ff",
             fill: true,
           },
           {
             data: dailyData.map((data) => data.deaths),
+            fontFamily: "'Akaya Telivigala', cursive",
             label: "Deceased",
             borderColor: "red",
             backgroundColor: "rgba(255, 0, 0, 0.5)",
@@ -64,17 +67,24 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
           {
             data: dailyData.map((data) => data.recovered),
             label: "Recovered",
+            fontFamily: "'Akaya Telivigala', cursive",
             borderColor: "green",
             backgroundColor: "rgba(0, 255, 0, 0.5)",
             fill: true,
           },
         ],
+        fontFamily: "'Akaya Telivigala', cursive",
       }}
     />
   ) : null;
 
   return (
-    <div className={styles.container}>{country ? barChart : lineChart}</div>
+    <div
+      className={styles.container}
+      style={{ fontFamily: "'Akaya Telivigala', cursive" }}
+    >
+      {country ? barChart : lineChart}
+    </div>
   );
 };
 

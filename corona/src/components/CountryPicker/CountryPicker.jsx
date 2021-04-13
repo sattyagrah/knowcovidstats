@@ -21,10 +21,20 @@ const Countries = ({ handleCountryChange }) => {
       <NativeSelect
         defaultValue=""
         onChange={(e) => handleCountryChange(e.target.value)}
+        style={{
+          fontFamily: "'Akaya Telivigala', cursive",
+          fontSize: "1.1rem",
+        }}
       >
-        <option value="">Global</option>
+        <option value="" style={{ fontFamily: "'Akaya Telivigala', cursive" }}>
+          Global
+        </option>
         {countries.map((country, i) => (
-          <option key={i} value={country}>
+          <option
+            key={i}
+            value={country}
+            style={{ fontFamily: "'Akaya Telivigala', cursive" }}
+          >
             {country}
           </option>
         ))}

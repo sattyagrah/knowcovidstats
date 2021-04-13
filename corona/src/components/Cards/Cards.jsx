@@ -10,7 +10,15 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
 
   return (
     <div className={styles.container}>
-      <Typography gutterBottom variant="h4" component="h2">
+      <Typography
+        gutterBottom
+        variant="h4"
+        component="h2"
+        style={{
+          fontFamily: "'Akaya Telivigala', cursive",
+          marginBottom: "25px",
+        }}
+      >
         COVID-19 DATA
       </Typography>
       <Grid container spacing={3} justify="center">
@@ -19,7 +27,7 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
           cardTitle="Infected"
           value={confirmed.value}
           lastUpdate={lastUpdate}
-          cardSubtitle="Number of active cases from COVID-19."
+          cardSubtitle="Number of active cases due to COVID-19."
         />
         <CardComponent
           className={styles.recovered}
