@@ -41,15 +41,25 @@ function Pincode(props) {
     let pin = document.getElementById("pincode").value;
 
     let msg = document.getElementById("message");
-    if (pin.length === 0 || pin.length > 6) {
+    if (pin.length === 0 || pin.length > 6 || pin.length < 6) {
       msg.style.color = "red";
       msg.textContent = `Pin must be of 6 digits.`;
-    } else if (pin.length === 6) {
+    } else if (typeof pin !== "number") {
+      msg.style.color = "red";
+      msg.textContent = `Enter correct Pincode.`;
+    } else if (pin.length === 6 && typeof pin === "number") {
       msg.textContent = null;
     }
 
     function pins() {
-      return document.getElementById("pincode").value;
+      let msg = document.getElementById("message");
+      let pinValue = document.getElementById("pincode").value;
+      if (pinValue.toString().length === 6) {
+        return document.getElementById("pincode").value;
+      } else {
+        msg.style.color = "Red";
+        msg.textContent = `Pin must be of 6 digits.`;
+      }
     }
 
     function pincodes() {
@@ -69,12 +79,18 @@ function Pincode(props) {
           availableSlots.forEach((e) => {
             console.log(e);
           });
-          console.log(
-            `Vaccines are available at ${availableSlots.length} centers`
-          );
-          msg.style.color = "black";
-          msg.style.cursor = "pointer";
-          msg.textContent = `Vaccines are available at ${availableSlots.length} centers`;
+          if (availableSlots.length > 0) {
+            console.log(
+              `Vaccines are available at ${availableSlots.length} centers`
+            );
+            msg.style.color = "black";
+            msg.style.cursor = "pointer";
+            msg.textContent = `Vaccines are available at ${availableSlots.length} centers`;
+          } else {
+            console.log(`No vaccine is available on ${date()}.`);
+            msg.style.color = "red";
+            msg.textContent = `No Vaccine available on ${date()}.`;
+          }
         } else {
           console.log(`No vaccine is available on ${date()}.`);
           msg.style.color = "red";
