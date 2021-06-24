@@ -6,6 +6,7 @@ import styles from "./App.module.css";
 
 import image from "./images/image.png";
 import Pincode from "./components/Pincode";
+import Footer from "./components/Footer";
 
 class App extends React.Component {
   state = {
@@ -52,11 +53,19 @@ class App extends React.Component {
     return (
       <div className={styles.container}>
         <img className={styles.image} src={image} alt="COVID-19" />
-        <div style={{ fontSize: "2rem" }} id="times"></div>
+        <div
+          style={{
+            fontSize: "2rem",
+            fontFamily: "'Nunito', sans-serif",
+            fontWeight: "bold",
+          }}
+          id="times"
+        ></div>
         <Cards data={data} />
         <Pincode />
         <CountryPicker handleCountryChange={this.handleCountryChange} />
         <Chart data={data} country={country} />
+        <Footer />
       </div>
     );
   }

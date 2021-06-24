@@ -128,13 +128,14 @@ function Pincode(props) {
                     <TextField
                       InputLabelProps={{
                         style: {
-                          fontFamily: "'Akaya Telivigala', cursive",
+                          fontFamily: "'Nunito', sans-serif",
+                          fontWeight: "bold",
                           color: "#822659",
                         },
                       }}
                       InputProps={{
                         style: {
-                          fontFamily: "'Akaya Telivigala', cursive",
+                          fontFamily: "'Nunito', sans-serif",
                           fontSize: "1.2rem",
                           color: "#822659",
                         },
@@ -162,7 +163,9 @@ function Pincode(props) {
                       variant="contained"
                       color="primary"
                       className={classes.submit}
-                      style={{ fontSize: "1.1rem" }}
+                      style={{
+                        fontSize: "1.1rem",
+                      }}
                       onClick={() => {
                         setVisiblet(!visiblet);
                         setTimeout(myFunction, 1000);

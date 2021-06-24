@@ -22,18 +22,28 @@ const Countries = ({ handleCountryChange }) => {
         defaultValue=""
         onChange={(e) => handleCountryChange(e.target.value)}
         style={{
-          fontFamily: "'Akaya Telivigala', cursive",
+          fontFamily: "'Nunito', sans-serif",
+          fontWeight: "bold",
           fontSize: "1.1rem",
         }}
       >
-        <option value="" style={{ fontFamily: "'Akaya Telivigala', cursive" }}>
+        <option
+          value=""
+          style={{
+            fontFamily: "'Nunito', sans-serif",
+            fontWeight: "bold",
+          }}
+        >
           Global
         </option>
         {countries.map((country, i) => (
           <option
             key={i}
             value={country}
-            style={{ fontFamily: "'Akaya Telivigala', cursive" }}
+            style={{
+              fontFamily: "'Nunito', sans-serif",
+              fontWeight: "bold",
+            }}
           >
             {country}
           </option>

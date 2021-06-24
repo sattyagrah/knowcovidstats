@@ -1,7 +1,5 @@
 .card {
   margin: 0 2% !important;
-  font-family: 'Akaya Telivigala', cursive;
-
 }
 @media only screen and (max-width: 770px) {
   .card {

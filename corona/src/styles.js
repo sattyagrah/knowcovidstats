@@ -2,7 +2,8 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   typography: {
-    fontFamily: "'Akaya Telivigala', cursive",
+    fontFamily: "'Nunito', sans-serif",
+    fontWeight: "bold",
   },
   card: {
     backgroundColor: "white", // #f7d9d9
@@ -14,7 +15,8 @@ const useStyles = makeStyles((theme) => ({
     padding: "15px 15px 15px 15px",
   },
   submit: {
-    fontFamily: "'Akaya Telivigala', cursive",
+    fontFamily: "'Nunito', sans-serif",
+    fontWeight: "bold",
   },
   cardGrid: {
     padding: "20px 0",

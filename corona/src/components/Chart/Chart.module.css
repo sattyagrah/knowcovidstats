@@ -1,8 +1,4 @@
-:root{
-  font-family: 'Akaya Telivigala', cursive !important;
-}
 .container {
-  font-family: 'Akaya Telivigala', cursive;
   display: flex;
   justify-content: center;
   width: 65%;

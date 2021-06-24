@@ -24,8 +24,9 @@ const CardComponent = ({
         color="textSecondary"
         gutterBottom
         style={{
-          fontFamily: "'Akaya Telivigala', cursive",
+          fontFamily: "'Nunito', sans-serif",
           fontSize: "1.5rem",
+          fontWeight: "bold",
         }}
       >
         {cardTitle}
@@ -33,14 +34,14 @@ const CardComponent = ({
       <Typography
         variant="h5"
         component="h2"
-        style={{ fontFamily: "'Akaya Telivigala', cursive" }}
+        style={{ fontFamily: "'Nunito', sans-serif", fontWeight: "bold" }}
       >
         <CountUp start={0} end={value} duration={2.75} separator="," />
       </Typography>
       <Typography
         color="textSecondary"
         style={{
-          fontFamily: "'Akaya Telivigala', cursive",
+          fontFamily: "'Nunito', sans-serif",
           fontSize: "1.2rem",
         }}
       >
@@ -50,7 +51,7 @@ const CardComponent = ({
         variant="body2"
         component="p"
         style={{
-          fontFamily: "'Akaya Telivigala', cursive",
+          fontFamily: "'Nunito', sans-serif",
           fontSize: "1rem",
         }}
       >
