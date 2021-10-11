@@ -15,9 +15,10 @@ function Footer() {
           fontFamily: "'Nunito', sans-serif",
           fontWeight: "bold",
           paddingTop: "20px",
+          color: "Green",
         }}
       >
-        We stand with everyone fighting on the frontlines.
+        ✌We stand with everyone fighting on the frontlines.✌
       </Typography>
     </main>
   );

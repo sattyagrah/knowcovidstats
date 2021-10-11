@@ -53,16 +53,24 @@ const Info = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
         style={{
           fontFamily: "'Nunito', sans-serif",
           paddingTop: "20px",
+          textAlign: "center",
+          maxWidth: "80%",
+          color: "red",
+          fontWeight: "bold",
         }}
       >
         <InfoOutlinedIcon
           style={{
             fontSize: "15px",
             display: "inline",
-            justifyContent: "left",
+            // justifyContent: "left",
+            paddingTop: "5px",
           }}
         />{" "}
-        Data may be delayed as it's being fetched from an external source.
+        Data may be delayed as it's being fetched from an external source. As
+        Covid cases are reducing due to large vaccination drive, sources stopped
+        pulishing data to the API. Hence, Data shown here is provisional. For
+        accurate data please visit to the concerned official sites.
       </Typography>
     </div>
   );
